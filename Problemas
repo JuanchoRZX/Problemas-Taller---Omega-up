@@ -1,6 +1,6 @@
 1. 17651. Duplicados
-lista = input().split()
 
+lista = input().split()
 def duplicados(lista):
     unicas = []
     for i in lista:
@@ -9,13 +9,13 @@ def duplicados(lista):
     unicas.sort()
     salida = " ".join(unicas)
     return salida
-
 print( duplicados(lista), end="")
 
 Link: https://omegaup.com/arena/problem/Duplicados/
 
 
 2. 12707. E1
+
 for i in range(1, 10+1):
     print(i)
 
@@ -23,24 +23,23 @@ Link: https://omegaup.com/arena/problem/C37/
 
 
 3.15816. Mas sobre Operadores Relacionales
+
 a = int(input())
 b = int(input())
-
 def igual(a,b):
   if a==b:
   	return 1
   else:
     return 0     
-    
 print(igual(a,b))     
 
 Link: https://omegaup.com/arena/problem/A-4-Session3/
 
 
 4.12710. E4
+
 a = int(input())
 b = int(input())
-
 for i in range(a, b+1):
     print(i)
 
@@ -48,16 +47,16 @@ Link: https://omegaup.com/arena/problem/C40/
 
 
 5. 10618. Tienda de tennis
-a = int(input())
 
+a = int(input())
 print(a * 20000)
 
 Link: https://omegaup.com/arena/problem/Tienda-de-tennis/
 
 
 6.10417. PEFMAT-Ejercicio31
-num = int(input())
 
+num = int(input())
 def esPrimo(num):
     if num == 2:return 1
     if num % 2 == 0:return 0
@@ -66,15 +65,14 @@ def esPrimo(num):
         if num % i == 0:return 0
         i += 2
     return 1
-    
 print(esPrimo(num))
 
 Link:  https://omegaup.com/arena/problem/PEFMAT-Ejercicio31/
 
 
 7.10427. PEFMAT-Ejercicio37
-n = int(input())
 
+n = int(input())
 def esPrimo(num):
     if num == 2:return True
     if num % 2 == 0:return False
@@ -97,18 +95,53 @@ print(suma)
 Link: https://omegaup.com/arena/problem/PEFMAT-Ejercicio37/
 
 
-8.
-x
+8. 8418. Probabilidad
+
+a = int(input())
+b = int(input())
+def probabilidad(a, b):
+  return (a * 100) / b 
+print(f"La probabilidad es de %{probabilidad(a, b):.2f}")
+
+Link: https://omegaup.com/arena/problem/Probabilidad/
 
 
+9. 17475. demonios de chainsaw man
 
-Link:
+cantidad = int(input())
+numeros = input().split()
+suma = 0
+for i in range(cantidad):
+    numero = int(numeros[i])
+    suma += numero
+print(suma)
+
+Link: https://omegaup.com/arena/problem/demonios-de-chainsaw-man/
 
 
-9.
-x
+10. 17540. Cuenta de dígitos
+
+numero = int(input())
+cant=1
+while numero//10 != 0:
+    numero//=10
+    cant += 1
+print(cant)
+
+Link: https://omegaup.com/arena/problem/Cuenta-de-digitos/
 
 
+11. 17474. Suma de N numeros
 
-Link:
+cantidad = int(input())
+numeros = input().split()
+suma = 0
+for numero in numeros:
+    suma += int(numero)
+print(suma)
+
+Link: https://omegaup.com/arena/problem/Suma-de-N-numeros/
+
+
+12.
 
