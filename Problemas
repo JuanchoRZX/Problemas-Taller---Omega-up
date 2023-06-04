@@ -110,11 +110,13 @@ Link: https://omegaup.com/arena/problem/Probabilidad/
 
 cantidad = int(input())
 numeros = input().split()
-suma = 0
-for i in range(cantidad):
-    numero = int(numeros[i])
-    suma += numero
-print(suma)
+def calcsuma(numeros):
+    suma = 0
+    for i in range(len(numeros)):
+        numero = int(numeros[i])
+        suma += numero
+    return suma
+print(calcsuma(numeros))
 
 Link: https://omegaup.com/arena/problem/demonios-de-chainsaw-man/
 
@@ -122,11 +124,13 @@ Link: https://omegaup.com/arena/problem/demonios-de-chainsaw-man/
 10. 17540. Cuenta de dígitos
 
 numero = int(input())
-cant=1
-while numero//10 != 0:
-    numero//=10
-    cant += 1
-print(cant)
+def contardigs(numero):
+    cant = 1
+    while numero // 10!=0:
+        numero //= 10
+        cant += 1
+    return cant
+print(contardigs(numero))
 
 Link: https://omegaup.com/arena/problem/Cuenta-de-digitos/
 
@@ -135,13 +139,22 @@ Link: https://omegaup.com/arena/problem/Cuenta-de-digitos/
 
 cantidad = int(input())
 numeros = input().split()
-suma = 0
-for numero in numeros:
-    suma += int(numero)
-print(suma)
+def calcular(numeros):
+    suma = 0
+    for numero in numeros:
+        suma += int(numero)
+    return suma
+print(calcular(numeros))
 
 Link: https://omegaup.com/arena/problem/Suma-de-N-numeros/
 
 
-12.
+12. 17442. Suma consecutiva (Versión fácil)
+N = int(input())
+def gauss(N):
+    suma = (N *(N+1))// 2
+    return suma
+print(gauss(N))
+
+Link: https://omegaup.com/arena/problem/Suma-consecutiva-Version-facil/
 
