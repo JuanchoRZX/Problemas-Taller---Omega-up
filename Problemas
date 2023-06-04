@@ -682,4 +682,570 @@ Link: https://omegaup.com/arena/problem/Teclado-Roto/
 
 
 
-46.
+46. 16558. Descifrando la pila
+
+n = int(input())
+v = list(map(int, input().split()))
+def Pila(n, v):
+    pila = []
+    for i in v:
+        if len(pila) < i:
+            pila.append(i)
+        else:
+            pila = pila[:-i]
+    return len(pila), pila[::-1]
+cantidad, elementos = Pila(n, v)
+print(cantidad)
+print(' '.join(map(str, elementos)))
+
+Link: https://omegaup.com/arena/problem/Decifrando-la-pila/
+
+
+
+47. 14117. Modificar Sumas
+
+A, B = map(int, input().split())
+def sumarEnteros(A, B):
+    suma = A+B
+    return suma
+print(sumarEnteros(A, B))
+
+Link: https://omegaup.com/arena/problem/Modificar-Sumas/
+
+
+
+48. 9003. SEC05 Mostrar el Residuo
+
+x = int(input())
+y = int(input())
+def calcularRes(x, y):
+    residuo = x%y
+    return residuo
+print(calcularRes(x, y))
+
+Link: https://omegaup.com/arena/problem/SEC05-Mostrar-el-Residuo/
+
+
+
+49. 8494. cambia a mayuscula
+
+letra = input()
+def convertiMam(letra):
+    may = letra.upper()
+    return may
+print(convertiMam(letra))
+
+Link: https://omegaup.com/arena/problem/cambia-a-mayuscula/
+
+
+
+50. 7391. Mod de dos números (Medallita)
+
+A = int(input())
+B = int(input())
+def calcularMod(A, B):
+    res = A % B
+    return res
+print(calcularMod(A, B))
+
+Link: https://omegaup.com/arena/problem/Mod-de-dos-numeros/
+
+
+
+51. 10581. Tienda de teléfonos
+
+telefonos = int(input())
+def Costototal(telefonos):
+    precio = 10000
+    total = telefonos * precio
+    return total
+print(Costototal(telefonos))
+
+Link: https://omegaup.com/arena/problem/Tienda-de-telefonos/
+
+
+
+52. 8987. A Contar Letras (Medallita)
+
+palabra = input()
+def contarL(palabra):
+    contador = 0
+    for i in palabra:
+        if i != " ":contador+=1
+    return contador
+print(contarL(palabra))
+
+Link: https://omegaup.com/arena/problem/A-Contar-Letras/
+
+
+
+53. 13509. Al revés volteado - Ejemplo 16
+
+palabra = input()
+def Inv(palabra):
+    InvW = ""
+    lon = len(palabra)
+    for i in range(lon):
+        InvW += palabra[lon-i-1]
+    return InvW
+print(Inv(palabra))
+
+Link: https://omegaup.com/arena/problem/Al-reves-volteado---Ejemplo-16/
+
+
+
+54. 15101. A elegir nombres divertidos
+
+N = int(input())
+def filtrarNombres(nombres):
+    NombresD = []
+    for nombre in nombres:
+        if nombre[0] == 'E':
+            NombresD.append(nombre)
+    return NombresD
+nombres = []
+for _ in range(N):
+    nombre = input()
+    nombres.append(nombre)
+for i in filtrarNombres(nombres):
+    print(i)
+    
+Link: https://omegaup.com/arena/problem/CR21-A-elegir-nombres-divertidos/
+
+
+
+55. 10606. Suma con numeros decimales
+
+a = float(input())
+b = float(input())
+def sumarDecimales(a, b):
+    RES = a+b
+    return RES
+print(sumarDecimales(a, b))
+
+Link: https://omegaup.com/arena/problem/Suma-con-numeros-decimales/
+
+
+
+56. 13133. Vectores
+
+N = int(input())
+regalos = list(map(int, input().split()))
+def verificar(N, regalos):
+    suma = 0
+    for i in range(N-1):
+        suma += regalos[i]
+    if suma == regalos[N-1]:return 1
+    return -1
+print(verificar(N, regalos))
+
+Link: https://omegaup.com/arena/problem/Vectores/
+
+
+ 
+57. 15391. Contando Letras en una Oracion
+
+oracion = input()
+def contar(oracion):
+    count = 0
+    for i in oracion:
+        if 'a'<=i<='z'or'A'<=i<='Z':
+            count += 1
+    return count
+print(contar(oracion))
+
+LinK: https://omegaup.com/arena/problem/Contando-Letras-en-una-Oracion/
+
+
+
+58. 2539. Ordenar intercalando
+
+piezas = list(map(int, input().split()))
+def ordenar(piezas):
+    while piezas != [1, 2, 3, 4, 5]:
+        for i in range(len(piezas)-1):
+            if piezas[i] > piezas[i +1]:
+                piezas[i], piezas[i +1] = piezas[i+1], piezas[i]
+                print(*piezas)
+ordenar(piezas)
+
+Link: https://omegaup.com/arena/problem/ordenar_intercalando/
+
+
+
+59. 9026. Multiplicar los elementos de posiciones pares de un vector A por k.
+
+n = int(input())  
+k = int(input())  
+A = list(map(int, input().split())) 
+def multiplicar_pares(A, k):
+    n = len(A)
+    for i in range(n):
+        if i%2 == 0: A[i] *= k 
+    return A
+print(*multiplicar_pares(A, k))
+
+Link: https://omegaup.com/arena/problem/Multiplicar-elementos-pospar-k/
+
+
+
+60. 16315. Producto punto (std::vectors)
+
+n = int(input())  
+v1 = list(map(int, input().split()))  
+v2 = list(map(int, input().split())) 
+def ProductoP(n, v1, v2):
+    prod = 0
+    for i in range(n):
+        prod += v1[i]*v2[i]
+    return prod
+print(ProductoP(n, v1, v2))
+
+Link: https://omegaup.com/arena/problem/Producto-punto-stdvectors/
+
+
+
+61. 16493. Separando la frase
+
+frase = input()
+def obtener(frase):
+    palabras = frase.split()
+    return palabras
+for i in obtener(frase):
+    print(i)
+    
+Link: https://omegaup.com/arena/problem/Separando-la-frase/
+
+
+
+62. 8182. Ayudando a Don Pablo
+
+precio= int(input())
+tortas = int(input())
+def calcularP(precio, tortas):
+    total = precio*tortas
+    return total
+print(calcularP(precio, tortas))
+
+Link: https://omegaup.com/arena/problem/Ayudando-a-Don-Pablo/
+
+
+
+63. 4575. ArregloBidi2 (Medallita)
+
+n = int(input())
+def generar(n):
+    arr = []
+    for i in range(n):
+        fila = []
+        for j in range(n):
+            fila.append(i*j)
+        arr.append(fila)
+    return arr
+def imprimir(arr):
+    for fila in arr:
+        for siu in fila:
+            print(siu, end="")
+        print()
+imprimir(generar(n))
+
+Link: https://omegaup.com/arena/problem/ArregloBidi2/#problems
+
+
+
+64. 12144. El bit perdido
+
+N = int(input())
+def elevar(A, N):
+    if N:return A*elevar(A, N-1)
+    return 1
+def maxDec(N):
+    maxD = elevar(2, N)-1
+    return maxD
+print(maxDec(N))
+
+Link: https://omegaup.com/arena/problem/El-bit-perdido-ANH/
+
+
+
+65. 13383. 4 bits a decimal
+
+bin = input()
+def binAdec(bin):
+    dec = int(bin, 2)
+    return dec
+print(binAdec(bin))
+
+Link: https://omegaup.com/arena/problem/4-bits-a-decimal/
+
+
+
+66. 3992. Buscando la inicial (Medallita)
+
+fav = input()
+n = int(input())
+palabras = []
+def buscar(fav, n, palabras):
+    encontrada = ""
+    for i in palabras:
+        if i[0] == fav:
+            encontrada = i
+            break
+    return encontrada
+for _ in range(n):
+    palabra = input()
+    palabras.append(palabra)
+print(buscar(fav, n, palabras))
+
+Link: https://omegaup.com/arena/problem/Buscando-la-inicial/
+
+
+
+67. 11773. Sumando Arreglos
+
+N = int(input())
+arr1 = list(map(int, input().split()))
+arr2 = list(map(int, input().split()))
+def sumaArr(N, arr1, arr2):
+    suma = []
+    for i in range(N):
+        suma.append(arr1[i] + arr2[i])
+    return suma
+print(*sumaArr(N, arr1, arr2))
+
+Link: https://omegaup.com/arena/problem/Sumando-Arreglos/
+
+
+
+68. 5660. Un viaje aburrido (Medallita)
+
+n = int(input())
+canciones = list(map(int, input().split()))
+def tiempoTotal(n, canciones):
+    total = 0
+    for i in canciones:
+        total+=i
+    return total
+print(tiempoTotal(n, canciones))
+
+Link: https://omegaup.com/arena/problem/Un-viaje-aburrido/
+
+
+
+69. 17562. Descubriendo los secretos del Triángulo Mágico
+
+lados = input().split(",")
+l1, l2, l3 = map(int, lados)
+def TipoTrian(l1, l2, l3):
+    if l1 == l2 == l3:
+        print("El triangulo es equilatero.")
+    elif l1 == l2 or l1 == l3 or l2 == l3:
+        print("El triangulo es isosceles.")
+    else:
+        print("El triangulo es escaleno.")
+TipoTrian(l1, l2, l3)
+
+Link:https://omegaup.com/arena/problem/Descubriendo-los-secretos-del-Tr/
+
+
+
+70. 13111. Vocales dentro de una palabra
+
+palabra = input()
+def analizar(palabra):
+    cantidadL = len(palabra)
+    vocales = "AEIOUaeiou"
+    cant = 0
+    for i in palabra:
+        if i in vocales:
+            cant += 1
+    InvW = ""
+    lon = len(palabra)
+    for i in range(lon):
+        InvW += palabra[lon-i-1]
+    return cantidadL, cant, InvW
+print(analizar(palabra)[0])  
+print(analizar(palabra)[1])  
+print(analizar(palabra)[2])
+
+Link: https://omegaup.com/arena/problem/Vocales-dentro-de-una-palabra/
+
+
+
+71. 8175. Buscando tiempo para leer
+
+libros = int(input())
+def dinero(libros):
+    diner = libros*100
+    return diner
+print(dinero(libros))
+
+Link: https://omegaup.com/arena/problem/Buscando-tiempo-para-leer/
+
+
+
+72. 13501. Sumas hasta la N - Ejemplo 10
+
+caracter, numero = input().split()
+numero = int(numero)
+def suma(caracter, numero):
+    suma = 0
+    while caracter == 'S' or caracter == 's':
+        suma += numero
+        caracter, numero = input().split()
+        numero = int(numero)
+    return suma
+print("La suma es:", suma(caracter, numero))
+
+Link: https://omegaup.com/arena/problem/Sumas-hasta-la-N---Ejemplo-10/
+
+
+
+73. 6009. Super Puercos (Medallita)
+
+n = int(input())
+superpuercos = []
+def graduados(n, superpuercos):
+    grad = 0
+    letras = []
+    for i in superpuercos:
+        letra = i[0]
+        if letra not in letras:
+            grad += 1
+            letras.append(letra)
+    return grad
+for _ in range(n):
+    nombre = input()
+    superpuercos.append(nombre)
+print(graduados(n, superpuercos))
+
+Link: https://omegaup.com/arena/problem/Super-Puercos/#problems
+
+
+
+74. 5837. Diario de tu hermano (Medallita)
+
+diario = input()
+def voltear(diario):
+    invD = ""
+    lon = len(diario)
+    for i in range(lon):
+        invD += diario[lon - i - 1]
+    return invD
+print(voltear(diario), end="")
+
+Link: https://omegaup.com/arena/problem/Diario-de-tu-hermano/#problems
+
+
+
+75. 10629. Area del circulo (Medallita)
+
+radio = int(input())
+def CircArea(radio):
+    Area = 3.14159 * radio**2
+    return Area
+print("{:.2f}".format(CircArea(radio)))
+
+Link: https://omegaup.com/arena/problem/Area-del-circulo/
+
+
+
+76. 11253. Cápsula de energía
+
+energia = int(input())
+def verificar(energia):
+    if energia % 2 == 0:return "PIDELO"
+    return "SIGUE BUSCANDO"
+print(verificar(energia))
+
+Link: https://omegaup.com/arena/problem/Capsula-de-energia/
+
+
+
+77. 11608. Multiples Sumas
+
+t = int(input()) 
+def Suma(a, b):
+    return a + b
+for _ in range(t):
+    a, b = map(int, input().split())  
+    print(Suma(a, b))  
+    
+Link: https://omegaup.com/arena/problem/Multiples-Sumas/
+
+
+
+78. 3295. DFD-Serie de 1 a N (Medallita)
+
+n = int(input())
+def DFD(n):
+    for i in range(1,n+1):
+        print(i)
+DFD(n)
+
+Link: https://omegaup.com/arena/problem/Serie-de-1-a-N/
+
+
+
+79. 5986. Comida del maestro carlos (Medallita)
+
+A, G = map(int, input().split())
+def calcular(A, G):
+    totales = []
+    for _ in range(A):
+        cantidades = list(map(int, input().split()))
+        total = 0
+        for i in cantidades:
+            total += i
+        totales.append(total)
+    return totales
+for total in calcular(A, G):
+    print(total)
+ 
+Link: https://omegaup.com/arena/problem/Comida-del-maestro-carlos/
+
+
+
+80. 10463. Suma de cuadrados :D
+
+X = int(input())
+def sumaCuad(X):
+    sumCuads = 0
+    for num in range(1, X + 1):
+        sumCuads += num**2
+    return sumCuads
+print(sumaCuad(X))
+
+Link: https://omegaup.com/arena/problem/Suma-de-cuadrados-D/
+
+
+
+81. 12252. Sucesiones anfibias
+
+n, i = map(int, input().split())
+numeros = list(map(int, input().split()))
+def numeroEnPosicion(n, i, numeros):
+    numero_deseado = numeros[i-1]
+    return numero_deseado
+print(numeroEnPosicion(n, i, numeros))
+
+Link: https://omegaup.com/arena/problem/Sucesiones-anfibias-/
+
+
+
+82. 2434. Suma de los dígitos (Medallita)
+
+numero = int(input())
+def sumaDigitos(numero):
+    suma = 0
+    while numero >0:
+        suma += numero%10
+        numero//=10
+    return suma
+print(sumaDigitos(numero))
+
+Link: https://omegaup.com/arena/problem/Suma-de-los-digitos/
+
+
+
+83. 
