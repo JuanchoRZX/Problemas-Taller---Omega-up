@@ -14,12 +14,14 @@ print( duplicados(lista), end="")
 Link: https://omegaup.com/arena/problem/Duplicados/
 
 
+
 2. 12707. E1
 
 for i in range(1, 10+1):
     print(i)
 
 Link: https://omegaup.com/arena/problem/C37/
+
 
 
 3.15816. Mas sobre Operadores Relacionales
@@ -36,22 +38,30 @@ print(igual(a,b))
 Link: https://omegaup.com/arena/problem/A-4-Session3/
 
 
+
 4.12710. E4
 
-a = int(input())
-b = int(input())
-for i in range(a, b+1):
-    print(i)
+inicio = int(input())
+fin = int(input())
+def imprimirR(inicio, fin):
+    for i in range(inicio, fin + 1):
+        print(i)
+imprimirR(inicio, fin)
 
 Link: https://omegaup.com/arena/problem/C40/
 
 
+
 5. 10618. Tienda de tennis
 
-a = int(input())
-print(a * 20000)
+n = int(input())
+def calcmulti(n):
+    resultado = n * 20000
+    print(resultado)
+calcmulti(n)
 
 Link: https://omegaup.com/arena/problem/Tienda-de-tennis/
+
 
 
 6.10417. PEFMAT-Ejercicio31
@@ -68,6 +78,7 @@ def esPrimo(num):
 print(esPrimo(num))
 
 Link:  https://omegaup.com/arena/problem/PEFMAT-Ejercicio31/
+
 
 
 7.10427. PEFMAT-Ejercicio37
@@ -95,6 +106,7 @@ print(suma)
 Link: https://omegaup.com/arena/problem/PEFMAT-Ejercicio37/
 
 
+
 8. 8418. Probabilidad
 
 a = int(input())
@@ -104,6 +116,7 @@ def probabilidad(a, b):
 print(f"La probabilidad es de %{probabilidad(a, b):.2f}")
 
 Link: https://omegaup.com/arena/problem/Probabilidad/
+
 
 
 9. 17475. demonios de chainsaw man
@@ -121,6 +134,7 @@ print(calcsuma(numeros))
 Link: https://omegaup.com/arena/problem/demonios-de-chainsaw-man/
 
 
+
 10. 17540. Cuenta de dígitos
 
 numero = int(input())
@@ -133,6 +147,7 @@ def contardigs(numero):
 print(contardigs(numero))
 
 Link: https://omegaup.com/arena/problem/Cuenta-de-digitos/
+
 
 
 11. 17474. Suma de N numeros
@@ -149,7 +164,9 @@ print(calcular(numeros))
 Link: https://omegaup.com/arena/problem/Suma-de-N-numeros/
 
 
+
 12. 17442. Suma consecutiva (Versión fácil)
+
 N = int(input())
 def gauss(N):
     suma = (N *(N+1))// 2
@@ -157,4 +174,205 @@ def gauss(N):
 print(gauss(N))
 
 Link: https://omegaup.com/arena/problem/Suma-consecutiva-Version-facil/
+
+
+
+13. 9643. Honesto o mentiroso
+
+respuestaC = input()
+def honestidadD(respuestaC):
+    if respuestaC == "si":
+        return -1 
+    else:
+        return 1  
+print(honestidadD(respuestaC))
+
+Link: https://omegaup.com/arena/problem/Honesto-o-mentiroso/
+
+
+
+14. 3077. occ04pnsf24
+
+cantidad = int(input())
+def donacion(cantidad):
+    diferencia = 50 - (cantidad % 50)
+    if diferencia == 50:
+        return 0  
+    else:
+        return diferencia
+print(donacion(cantidad))
+
+Link: https://omegaup.com/arena/problem/Vueltas-Minuto-de-Dios/
+
+
+
+15. 13891. C56
+
+def contarpares():
+    contador = 0
+    numero = int(input())
+    while numero % 2 == 0:
+        contador += 1
+        numero = int(input())
+    return contador
+print(f"Escribiste {contarpares()} números pares consecutivos")
+
+Link: https://omegaup.com/arena/problem/C56/
+
+
+
+16. 13954. Dato curioso
+
+def datocurioso():
+    print("Las jirafas tienen el mismo número de huesos en su cuello que los seres humanos")
+datocurioso()
+
+Link: https://omegaup.com/arena/problem/dato-curioso-ovi/
+
+
+
+17. 16590. INVIRTIENDO LA PALABRA
+
+palabra = input()
+def invertir(palabra):
+    res = ""
+    for i in palabra:
+        if i.islower():
+            res+=i.upper()
+        else:
+            res+=i.lower()
+    return res
+print(invertir(palabra))
+
+Link: https://omegaup.com/arena/problem/INVIRTIENDO-LA-PALABRA/
+
+
+
+18. 8422. COME GALLETAS
+
+num = int(input())
+def galletastot(num):
+    total = num*10
+    for i in range(1, num+1):
+        if i%2 == 0:
+            total += (i//2)
+    return total
+print(galletastot(num))
+
+Link: https://omegaup.com/arena/problem/COME-GALLETAS/
+
+
+
+19. 10292. Profesor Ben Ito
+
+num = int(input())
+def masAlta(num):
+    maxC = 0
+    for _ in range(num):
+        calif = int(input())
+        if calif > maxC:
+            maxC = calif
+    return maxC
+print(masAlta(num))
+
+Link: https://omegaup.com/arena/problem/Profesor-Ben-Ito/
+
+
+
+20. 15118. reverse()
+
+palabra = input()
+listaL = list(palabra)
+def invertir(palabra):
+    longi = len(listaL)
+    for i in range(longi//2):
+        temp = listaL[i]
+        listaL[i] = listaL[longi-i -1]
+        listaL[longi-i -1] = temp
+    palabraInv = ''.join(listaL)
+    return palabraInv
+print(invertir(palabra))
+
+Link: https://omegaup.com/arena/problem/invertir/
+
+
+
+21. 5651. Brayan y su bendicion (Medallita)
+
+N = int(input())
+def calcularEdad(N):
+    edad = 2017-N
+    return edad
+print(calcularEdad(N))
+
+Link: https://omegaup.com/arena/problem/Brayan-y-su-bendicion/
+
+
+
+22. 4222. programacion
+
+numero = int(input())
+def elevarCuad(numero):
+    resultado = numero ** 2
+    print(resultado)
+elevarCuad(numero)
+
+Link: https://omegaup.com/arena/problem/programacion/
+
+
+
+23. 5661. Triangulos locos (Medallita)
+
+L = int(input())
+def Triuni(L):
+    numTri = L**2
+    return numTri
+print(Triuni(L))
+
+Link: https://omegaup.com/arena/problem/Triangulos-locos/
+
+
+
+24. 12228. Los saltos de Pancho
+
+n = int(input())
+def plantaS(n):
+    plantaA = 1
+    for _ in range(n):
+        print(plantaA)
+        plantaA += 1
+plantaS(n)
+
+Link: https://omegaup.com/arena/problem/Los-saltos-de-Pancho/
+
+
+
+25. 4575. ArregloBidi2 (Medallita)
+
+n = int(input())
+def CrearArr(n):
+    arreglo = []
+    for i in range(n):
+        fila = []
+        for j in range(n):
+            fila.append(i * j)
+        arreglo.append(fila)
+    return arreglo
+arreglo = CrearArr(n)
+
+def ImpArr(arreglo):
+    for i in range(len(arreglo)):
+        for j in range(len(arreglo[i])):
+            print(arreglo[i][j], end="")
+        print()
+ImpArr(arreglo)
+
+Link: https://omegaup.com/arena/problem/ArregloBidi2/
+
+
+
+26.
+
+
+
 
