@@ -410,4 +410,276 @@ Link: https://omegaup.com/arena/problem/Cuenta-regresiva/
 
 
 
-29.
+29. 641. Diferencia
+
+A, B, C, D = map(int, input().split())
+def calcdif(A, B, C, D):
+    diferencia = (A * B) - (C * D)
+    return diferencia
+print(calcdif(A, B, C, D))
+
+Link: https://omegaup.com/arena/problem/diferencia/
+
+
+
+30. 6846. Mataron a Kenny 2.0 (Medallita)
+
+N = int(input())
+def multiTres(N):
+    M = 0
+    for i in range(1, N + 1):
+        if i%3 == 0:
+            M += 1
+    return M
+print(multiTres(N))
+
+Link:https://omegaup.com/arena/problem/Mataron-a-Kenny-20/
+
+
+
+31. 8463. ¿Cuánto tiene que pagar? occ 2019
+
+A, B, p, q = map(int, input().split())
+def Paga(A, B, p, q):
+    costMate = 15000
+    costFis = 20000
+    totalMate = A * costMate
+    totalFis = B * costFis
+    descMate = totalMate * p / 100
+    descFis = totalFis * q / 100
+    total = totalMate - descMate + totalFis - descFis
+    return int(total)
+print(Paga(A, B, p, q))
+
+Link: https://omegaup.com/arena/problem/cuanto-tiene-que-pagar-occ-2019/
+
+
+
+32. 11793. BitMS
+
+numero = int(input())
+def bits(numero):
+    if numero % 2 == 0:
+        return 0
+    else:
+        return 1
+print(bits(numero))
+
+Link: https://omegaup.com/arena/problem/BitMSAnh/
+
+
+
+33. 8209. Corrigiendo a Tavo
+
+texto = input()
+def corregirCodigo(programa):
+    codigoCorregido = ""
+    for caracter in programa:
+        if caracter != '2':
+            codigoCorregido += caracter
+    return codigoCorregido
+print(corregirCodigo(texto))
+
+Link: https://omegaup.com/arena/problem/Corrigiendo-a-Tavo/
+
+
+
+34. 10702. Regalos de Rodrigo
+
+amigos = int(input())
+regalos = list(map(int, input().split()))
+def verificarR(amigos, regalos):
+    total = 0
+    for i in regalos[:-1]:
+        total+=i
+    ultimo = regalos[-1]  
+    if total == ultimo:
+        return 1
+    else:
+        return -1
+print(verificarR(amigos, regalos))
+
+Link: https://omegaup.com/arena/problem/Regalos-de-Rodrigo/
+
+
+
+35. 2458. Multiplicación de Edgar
+
+A = int(input())
+B = int(input())
+def multiplicacionED(a, b):
+    multiplicacion = 0
+    LA = []
+    while a > 0:
+        LA.append(a % 10)
+        a //= 10
+    LB = []
+    while b > 0:
+        LB.append(b % 10)
+        b //= 10
+    for digA in LA:
+        for digB in LB:
+            multiplicacion += digA * digB
+    return multiplicacion
+print(multiplicacionED(A, B))
+
+Link: https://omegaup.com/arena/problem/Multiplicacion-de-Edgar/
+
+
+
+36. 6045. Contar 'A' (Medallita)
+
+def contarA():
+    contador = 0
+    while True:
+        caracter = input()
+        if caracter == ".":break
+        if caracter == "A":
+        	contador += 1
+    return contador
+print(contarA())
+
+Link: https://omegaup.com/arena/problem/Contar-A/
+
+
+
+37. 1837. Las hachas de Gilgamesh y Enkidu  (Medallita)
+
+N, H, M, E = map(int, input().split())
+def calcularP(N, H, M, E):
+    total = (N * H) + (M * E)
+    return total
+print(calcularP(N, H, M, E))
+
+Link: https://omegaup.com/arena/problem/Las-hachas-de-Gilgamesh-y-Enkidu/
+
+
+
+38. 2467. Multiplicación
+
+numero1 = int(input())
+numero2 = int(input())
+def multiplicar(numero1, numero2):
+    resultado = numero1 * numero2
+    return resultado
+print(multiplicar(numero1, numero2))
+
+Link: https://omegaup.com/arena/problem/GPC1D/
+
+
+
+39. 13370. Entrada al cine
+
+cantidad = int(input())
+edades = []
+def B15(cantidad, edades):
+    contador = 0
+    for i in edades:
+        if i >= 15:
+            contador+=1
+    return contador
+for _ in range(cantidad):
+    edad = int(input())
+    edades.append(edad)
+print(B15(cantidad, edades))
+
+Link: https://omegaup.com/arena/problem/Entrada-al-cine/
+
+
+
+40. 13241. Puntos en la temporada
+
+ganados = int(input())
+empatados = int(input())
+def puntos(ganados, empatados):
+    total = ganados * 3 + empatados
+    return total
+print(puntos(ganados, empatados))
+
+Link: https://omegaup.com/arena/problem/Puntos-en-la-temporada/
+
+
+
+41. 2456. Minutos
+
+minutos = int(input())
+def MaS(minutos):
+    segundos = minutos * 60
+    return segundos
+print(MaS(minutos))
+
+Link: https://omegaup.com/arena/problem/Minutos/
+
+
+
+42. 16501. Posición del Jugador
+
+N = int(input())
+numeros = []
+for _ in range(N):
+    numero = int(input())
+    numeros.append(numero)
+def obtposicion(N, numeros):
+    posiciones = []
+    for i in range(N):
+        posiciones.append(numeros[i])
+    return posiciones
+while True:
+    numero = int(input())
+    if numero == -1:break
+    print(obtposicion(N, numeros)[numero])
+   
+Link: https://omegaup.com/arena/problem/Posicion-del-Jugador/
+
+
+
+43. 3078. occ04pnsf25 (Medallita)
+
+n, m = map(int, input().split())
+def numeros(n, m):
+    suma = (m-n+1)*(n+m)//2
+    return suma
+print(numeros(n, m))
+
+Link: https://omegaup.com/arena/problem/Suma-de-numeros-consecutivos/
+
+
+
+44. 3059. Edificación Virtual
+
+N = int(input())
+def NumPisos(N):
+    n = 0
+    suma = 0
+    while suma< N:
+        n+=1
+        suma+=n
+    return n
+print(NumPisos(N))
+
+Link: https://omegaup.com/arena/problem/Edificacion-Virtual/
+
+
+
+45. 17250. Teclado Roto
+
+santy = input()
+def corregir(santy):
+    correccion = ""
+    for i in santy:
+        if i == "0":
+            correccion += " "
+        elif i == "1":
+            correccion += "\n"
+        elif i == "2":
+            correccion += "\\"
+        else:
+            correccion += i
+    return correccion
+print(corregir(santy))
+
+Link: https://omegaup.com/arena/problem/Teclado-Roto/
+
+
+
+46.
