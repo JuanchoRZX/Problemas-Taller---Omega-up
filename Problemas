@@ -1248,4 +1248,36 @@ Link: https://omegaup.com/arena/problem/Suma-de-los-digitos/
 
 
 
-83. 
+83. 8803. Verificar si un número es capicúa
+
+n = int(input())
+def capicua(n):
+    original = n
+    atras = 0
+    while n > 0:
+        digito = n % 10
+        atras = atras * 10 + digito
+        n = n // 10
+    return original == atras
+if capicua(n):
+    print(f"El numero {n} es capicua")
+else:
+    print(f"El numero {n} no es capicua")
+
+Link: https://omegaup.com/arena/problem/Capicua/
+
+
+
+84. 15872. Factorial / Producto de varios números
+
+n = int(input())
+def fact(n):
+    if n == 0: return 1
+    return n *fact(n-1)
+print(fact(n))
+
+Link: https://omegaup.com/arena/problem/6-3-Factorial/
+
+
+
+85. 
