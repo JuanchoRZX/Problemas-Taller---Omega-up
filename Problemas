@@ -371,8 +371,43 @@ Link: https://omegaup.com/arena/problem/ArregloBidi2/
 
 
 
-26.
+26. 7388. Concatenacion de dos números (Medallita)
+
+A = int(input())
+B = int(input())
+def concatenar(A, B):
+    concatenacion = str(A) + str(B)
+    return concatenacion
+print(concatenar(A, B))
+
+Link: https://omegaup.com/arena/problem/Concatenacion-de-dos-numeros/
 
 
 
+27. 4386. Formula Recursiva Seis (Medallita)
 
+n = int(input())
+def f(n):
+	if n<=20: return 1
+	return f(n-5) + 5 + n
+print(f(n))
+
+Link: https://omegaup.com/arena/problem/Formula-Recursiva-Seis/
+
+
+
+28: 11949. Cuenta regresiva
+
+num = int(input())
+def cuenta(num):
+    if num <= 0:
+        return
+    print(num)
+    cuenta(num - 1)
+cuenta(num)
+
+Link: https://omegaup.com/arena/problem/Cuenta-regresiva/
+
+
+
+29.
